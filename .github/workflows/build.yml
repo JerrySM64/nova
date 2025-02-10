@@ -1,5 +1,5 @@
 ---
-name: Build GNOME Image
+name: Build Plasma Image
 on:
   pull_request:
     branches:
