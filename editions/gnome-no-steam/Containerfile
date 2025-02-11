@@ -14,8 +14,10 @@ FROM ghcr.io/ublue-os/bazzite-gnome:stable
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY build.sh /tmp/build.sh
+COPY editions/gnome-no-steam/remove-steam.sh /tmp/remove-steam.sh
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
+    /tmp/remove-steam.sh && \
     ostree container commit
     
