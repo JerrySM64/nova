@@ -2,4 +2,4 @@
 
 set -ouex pipefail
 
-dnf remove -y steam
+dnf5 remove -y steam
