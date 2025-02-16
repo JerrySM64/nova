@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora-bootc:latest
+FROM ghcr.io/alxhr0/horizon-base:latest
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:stable
@@ -21,8 +21,8 @@ COPY files/shared /
 
 RUN mkdir -p /var/lib/alternatives && \
     echo "nova_plasma_dx" >> /usr/share/nova/image_type && \
+    /tmp/build-shared.sh && \
     /tmp/build.sh && \
     /tmp/build-dx.sh && \
     /tmp/build-gaming.sh && \
-    /tmp/build-shared.sh && \
     ostree container commit

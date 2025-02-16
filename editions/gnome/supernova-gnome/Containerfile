@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora-bootc:latest
+FROM ghcr.io/alxhr0/horizon-base:latest
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:stable
