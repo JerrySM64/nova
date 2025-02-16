@@ -2,6 +2,8 @@
 
 set -ouex pipefail
 
+dnf5 -y install dnf5-plugins
+
 dnf5 -y config-manager addrepo --from-repofile=https://negativo17.org/repos/fedora-steam.repo
 
 
