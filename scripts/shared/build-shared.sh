@@ -2,6 +2,8 @@
 
 set -ouex pipefail
 
+dnf5 -y install wget dnf5-plugins
+
 dnf5 -y copr enable sentry/kernel-blu
 dnf5 -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 wget https://download.opensuse.org/repositories/home:Alxhr0/Fedora_41/home:Alxhr0.repo -P /etc/yum.repos.d
