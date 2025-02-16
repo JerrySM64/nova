@@ -1,5 +1,5 @@
 ---
-name: Build GNOME Image
+name: Build COSMIC DX Image
 on:
   pull_request:
     branches:
@@ -14,13 +14,13 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAME: "${{ github.event.repository.name }}-gnome"  # the name of the image produced by this build, matches repo names
+  IMAGE_NAME: "${{ github.event.repository.name }}-cosmic-dx"  # the name of the image produced by this build, matches repo names
   IMAGE_DESC: "My Customized Universal Blue Image"
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}"  # do not edit
   ARTIFACTHUB_LOGO_URL: "https://avatars.githubusercontent.com/u/120078124?s=200&v=4"  # You should put your own image here so that you get a fancy profile image on https://artifacthub.io/!
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}-${{ inputs.brand_name}}-${{ inputs.stream_name }}-gnome
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}-${{ inputs.brand_name}}-${{ inputs.stream_name }}-cosmic-dx
   cancel-in-progress: true
 
 jobs:
@@ -91,7 +91,7 @@ jobs:
         uses: redhat-actions/buildah-build@v2
         with:
           containerfiles: |
-            ./editions/gnome/nova-gnome/Containerfile
+            ./editions/cosmic/nova-cosmic-dx/Containerfile
           # Postfix image name with -custom to make it a little more descriptive
           # Syntax: https://docs.github.com/en/actions/learn-github-actions/expressions#format
           image: ${{ env.IMAGE_NAME }}

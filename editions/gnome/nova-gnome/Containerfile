@@ -1,4 +1,4 @@
-FROM ghcr.io/ublue-os/kinoite-main:latest
+FROM quay.io/fedora/fedora-bootc:latest
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:stable
@@ -14,8 +14,12 @@ FROM ghcr.io/ublue-os/kinoite-main:latest
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY build.sh /tmp/build.sh
+COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
+COPY files/shared /
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
+    /tmp/build-shared.sh && \
+    echo "nova_gnome" >> /usr/share/nova/image_type && \
     ostree container commit
     

@@ -13,9 +13,17 @@ FROM quay.io/fedora/fedora-bootc:latest
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
-COPY editions/cosmic/build.sh /tmp/build.sh
+COPY editions/gnome/nova-gnome/build.sh /tmp/build.sh
+COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
+COPY scripts/gaming/build-gaming.sh /tmp/build-gaming.sh
+COPY scripts/dx/build-dx.sh /tmp/build-dx.sh
+COPY files/shared /
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
+    /tmp/build-dx.sh && \
+    /tmp/build-gaming.sh && \
+    /tmp/build-shared.sh && \
+    echo "supernova_gnome" >> /usr/share/nova/image_type && \
     ostree container commit
     
