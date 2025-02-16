@@ -19,9 +19,9 @@ COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
 COPY files/shared /
 
 RUN mkdir -p /var/lib/alternatives && \
+    echo "nova_cosmic_gaming" >> /usr/share/nova/image_type && \
     /tmp/build.sh && \
     /tmp/build-gaming.sh && \
     /tmp/build-shared.sh && \
-    echo "nova_cosmic_gaming" >> /usr/share/nova/image_type && \
     ostree container commit
     

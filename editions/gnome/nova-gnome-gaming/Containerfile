@@ -19,9 +19,9 @@ COPY scripts/gaming/build-gaming.sh /tmp/build-gaming.sh
 COPY files/shared /
 
 RUN mkdir -p /var/lib/alternatives && \
+    echo "nova_gnome_gaming" >> /usr/share/nova/image_type && \
     /tmp/build.sh && \
     /tmp/build-shared.sh && \
     /tmp/build-gaming.sh && \
-    echo "nova_gnome_gaming" >> /usr/share/nova/image_type && \
     ostree container commit
     

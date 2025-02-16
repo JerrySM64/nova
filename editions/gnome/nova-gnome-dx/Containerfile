@@ -19,9 +19,9 @@ COPY scripts/dx/build-dx.sh /tmp/build-dx.sh
 COPY files/shared /
 
 RUN mkdir -p /var/lib/alternatives && \
+    echo "nova_gnome_dx" >> /usr/share/nova/image_type && \
     /tmp/build.sh && \
     /tmp/build-dx.sh && \
     /tmp/build-shared.sh && \
-    echo "nova_gnome_dx" >> /usr/share/nova/image_type && \
     ostree container commit
     

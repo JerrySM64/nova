@@ -20,10 +20,10 @@ COPY scripts/dx/build-dx.sh /tmp/build-dx.sh
 COPY files/shared /
 
 RUN mkdir -p /var/lib/alternatives && \
+    echo "supernova_gnome" >> /usr/share/nova/image_type && \
     /tmp/build.sh && \
     /tmp/build-dx.sh && \
     /tmp/build-gaming.sh && \
     /tmp/build-shared.sh && \
-    echo "supernova_gnome" >> /usr/share/nova/image_type && \
     ostree container commit
     
