@@ -29,6 +29,6 @@ dnf5 -y install intel-media-driver
 rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedorainfracloud.org:sentry:kernel-blu' kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
 
 
-dnf5 -y install fastfetch flatpak bat pfetch-rs fedora-flathub-remote glibc-all-langpacks hourglass
+dnf5 -y install fastfetch flatpak bat pfetch-rs fedora-flathub-remote glibc-all-langpacks hourglass just
 
 systemctl enable nova-flatpak-manager
