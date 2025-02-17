@@ -17,6 +17,7 @@ COPY editions/gnome/nova-gnome/build.sh /tmp/build.sh
 COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
 COPY scripts/dx/build-dx.sh /tmp/build-dx.sh
 COPY files/shared /
+COPY files/gnome/dx/os-release /etc
 
 RUN mkdir -p /var/lib/alternatives && \
     echo "nova_gnome_dx" >> /usr/share/nova/image_type && \

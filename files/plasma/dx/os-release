@@ -1,0 +1,16 @@
+NAME="Nova"
+VERSION="Plasma-DX"
+RELEASE_TYPE=stable
+ID=fedora
+ID_LIKE="nova"
+VERSION_ID=41
+VERSION_CODENAME="Plasma-DX"
+PLATFORM_ID="platform:f41"
+PRETTY_NAME="Nova 41 (Plasma-DX)"
+ANSI_COLOR="0;38;2;60;110;180"
+LOGO=nova-logo
+HOME_URL="https://github.com/jerrysm64/nova"
+VARIANT="Plasma DX"
+VARIANT_ID=Plasma-DX
+OSTREE_VERSION=''
+BOOTLOADER_NAME="Nova 41 (Plasma-DX)"

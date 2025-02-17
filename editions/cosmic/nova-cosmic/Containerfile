@@ -16,6 +16,7 @@ FROM ghcr.io/alxhr0/horizon-base:latest
 COPY editions/cosmic/nova-cosmic/build.sh /tmp/build.sh
 COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
 COPY files/shared /
+COPY files/cosmic/base/os-release /etc
 
 RUN mkdir -p /var/lib/alternatives && \
     echo "nova_cosmic" >> /usr/share/nova/image_type && \

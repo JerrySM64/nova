@@ -17,6 +17,7 @@ COPY editions/cosmic/nova-cosmic/build.sh /tmp/build.sh
 COPY scripts/gaming/build-gaming.sh /tmp/build-gaming.sh
 COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
 COPY files/shared /
+COPY files/cosmic/gaming/os-release /etc
 
 RUN mkdir -p /var/lib/alternatives && \
     echo "nova_cosmic_gaming" >> /usr/share/nova/image_type && \

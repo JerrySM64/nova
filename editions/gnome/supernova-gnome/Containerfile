@@ -18,6 +18,7 @@ COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
 COPY scripts/gaming/build-gaming.sh /tmp/build-gaming.sh
 COPY scripts/dx/build-dx.sh /tmp/build-dx.sh
 COPY files/shared /
+COPY files/gnome/supernova/os-release /etc
 
 RUN mkdir -p /var/lib/alternatives && \
     echo "supernova_gnome" >> /usr/share/nova/image_type && \

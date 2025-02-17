@@ -17,6 +17,7 @@ COPY editions/cosmic/nova-cosmic/build.sh /tmp/build.sh
 COPY scripts/dx/build-dx.sh /tmp/build-dx.sh
 COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
 COPY files/shared /
+COPY files/cosmic/dx/os-release /etc
 
 RUN mkdir -p /var/lib/alternatives && \
     echo "nova_cosmic_dx" >> /usr/share/nova/image_type && \
