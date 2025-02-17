@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+/usr/bin/just --justfile /usr/share/nova/nova/justfile $1
