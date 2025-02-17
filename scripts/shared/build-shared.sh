@@ -2,6 +2,12 @@
 
 set -ouex pipefail
 
+# Remove Horizon's stuff
+rm -rf /usr/share/horizon
+rm -r /etc/profile.d/horizon-aliases.sh
+rm -r /usr/lib/systend/system/horizon-flatpak-manager.service
+rm -r /usr/libexec/horizon-flatpak-manager
+
 dnf5 -y install wget dnf5-plugins
 
 dnf5 -y copr enable sentry/kernel-blu
