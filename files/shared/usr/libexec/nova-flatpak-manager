@@ -127,3 +127,4 @@ case "$image_type" in
         ;;
 esac
 
+systemctl disable --now nova-flatpak-manager

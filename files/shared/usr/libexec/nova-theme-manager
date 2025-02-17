@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+image_type=$(cat /usr/share/nova/image_type)
+
+case "$image_type" in
+    supernova_plasma | nova_plasma | nova_plasma_gaming | nova_plasma_dx)
+        konsoleprofile ColorScheme='Ashy Decay'
+        plasma-apply-colorscheme AshyDecay
+        ;;
+    supernova_cosmic | nova_cosmic | nova_cosmic_gaming | nova_cosmic_dx)
+        echo "Todo!"
+        ;;
+    supernova_gnome | nova_gnome | nova_gnome_gaming | nova_gnome_dx)
+        echo "Todo!"
+        ;;
+esac
