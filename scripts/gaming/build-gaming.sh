@@ -8,4 +8,4 @@ dnf5 -y config-manager addrepo --from-repofile=https://negativo17.org/repos/fedo
 
 
 # Steam
-dnf5 -y --setopt=install_weak_deps=False install steam lutris
+dnf5 -y --setopt=install_weak_deps=False install steam lutris gamemode
