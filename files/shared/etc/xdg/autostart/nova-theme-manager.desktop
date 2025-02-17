@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Nova Theme Manager
+Exec=/usr/bin/systemctl --user enable nova-theme-manager
