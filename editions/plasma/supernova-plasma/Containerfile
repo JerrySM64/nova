@@ -18,6 +18,7 @@ COPY scripts/dx/build-dx.sh /tmp/build-dx.sh
 COPY scripts/gaming/build-gaming.sh /tmp/build-gaming.sh
 COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
 COPY files/shared /
+COPY files/plasma/shared /
 COPY files/plasma/supernova/os-release /etc
 
 RUN mkdir -p /var/lib/alternatives && \
