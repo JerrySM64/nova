@@ -32,3 +32,4 @@ rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedor
 dnf5 -y install fastfetch flatpak bat pfetch-rs fedora-flathub-remote glibc-all-langpacks hourglass just google-noto-fonts-all
 
 systemctl enable nova-flatpak-manager
+systemctl enable sddm-theme-fix.mount
