@@ -17,6 +17,7 @@ COPY editions/plasma/nova-plasma/build.sh /tmp/build.sh
 COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
 COPY files/shared /
 COPY files/plasma/base/os-release /etc
+COPY files/plasma/shared /
 
 
 RUN mkdir -p /var/lib/alternatives && \
