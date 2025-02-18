@@ -1,6 +1,7 @@
 # This is needed because SDDM themes are only loaded from /usr/share/sddm/themes. Due to the nature of Fedora Atomic
 # (and therefore Nova), a mount from a writable path is required as a workaround. This will be removed when SDDM
 # gets an option implemented to load themes from Atomic-friendly locations (e.g. /usr/local/share/sddm/themes)
+# Special thanks to the Universal Blue project for figuring it out!
 
 [Unit]
 Description=KDE writable sddm workaround
