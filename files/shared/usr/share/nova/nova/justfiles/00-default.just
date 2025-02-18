@@ -35,8 +35,7 @@ fix-discord-flatpak-rpc:
 
 # Install Nix using the DeterminateSystems nix-installer
 install-nix:
-	curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | \
-        sh -s -- install
+	curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 
 # Update system
 update-system:
