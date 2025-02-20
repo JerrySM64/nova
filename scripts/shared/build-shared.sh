@@ -20,7 +20,9 @@ wget https://download.opensuse.org/repositories/home:Alxhr0/Fedora_41/home:Alxhr
 #    dnf5 -y install ffmpeg
 #fi
 
-rpm-ostree override remove libavdevice-free ffmpeg-free libavcodec-free libavfilter-free libavformat-free libavutil-free libpostproc-free libswresample-free libswscale-free --install ffmpeg
+dnf5 -y install ffmpeg
+
+#rpm-ostree override remove libavdevice-free ffmpeg-free libavcodec-free libavfilter-free libavformat-free libavutil-free libpostproc-free libswresample-free libswscale-free --install ffmpeg
 
 
 dnf5 -y install intel-media-driver
