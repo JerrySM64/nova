@@ -1,4 +1,4 @@
-FROM ghcr.io/alxhr0/horizon-base:latest
+FROM ghcr.io/alxhr0/horizon-asteroid:latest
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:stable
