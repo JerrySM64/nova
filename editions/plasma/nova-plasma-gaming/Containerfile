@@ -14,7 +14,6 @@ FROM ghcr.io/alxhr0/horizon-asteroid:latest
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY editions/plasma/nova-plasma/build.sh /tmp/build.sh
-COPY scripts/dx/build-dx.sh /tmp/build-dx.sh
 COPY scripts/gaming/build-gaming.sh /tmp/build-gaming.sh
 COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
 COPY files/shared /
@@ -23,8 +22,7 @@ COPY files/plasma/gaming/os-release /etc
 
 RUN mkdir -p /var/lib/alternatives && \
     echo "nova_plasma_gaming" >> /usr/share/nova/image_type && \
-    /tmp/build-shared.sh && \
     /tmp/build.sh && \
-    /tmp/build-dx.sh && \
+    /tmp/build-shared.sh && \
     /tmp/build-gaming.sh && \
     ostree container commit

@@ -23,8 +23,8 @@ COPY files/plasma/supernova/os-release /etc
 
 RUN mkdir -p /var/lib/alternatives && \
     echo "supernova_plasma" >> /usr/share/nova/image_type && \
-    /tmp/build-shared.sh && \
     /tmp/build.sh && \
+    /tmp/build-shared.sh && \
     /tmp/build-dx.sh && \
     /tmp/build-gaming.sh && \
     ostree container commit
