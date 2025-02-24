@@ -15,7 +15,7 @@ dnf5 -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release
 wget https://download.opensuse.org/repositories/home:Alxhr0/Fedora_41/home:Alxhr0.repo -P /etc/yum.repos.d
 
 if grep -q "nova_plasma" /usr/share/nova/image_type || grep -q "nova_plasma_dx" /usr/share/nova/image_type || grep -q "nova_plasma_gaming" /usr/share/nova/image_type || grep -q "supernova_plasma" /usr/share/nova/image_type; then
-    rpm-ostree override remove libswresample-free libavcodec-free libavformat-free libavutil-free libavfilter-free libswscale-free --install ffmpeg
+    rpm-ostree override remove libpostproc-free libswresample-free libavcodec-free libavformat-free libavutil-free libavfilter-free libswscale-free --install ffmpeg
 else
     dnf5 -y install ffmpeg
 fi
