@@ -5,6 +5,8 @@ set -ouex pipefail
 # Remove Horizon's stuff
 rm -rf /usr/share/horizon
 rm -r /etc/profile.d/horizon-aliases.sh
+rm -rf /etc/profile.d/console-login-helper-messages-profile.sh
+rm -rf /usr/share/console-login-helper-messages
 #rm -r /usr/lib/systemd/system/horizon-flatpak-manager.service
 #rm -r /usr/libexec/horizon-flatpak-manager
 
