@@ -5,8 +5,8 @@ set -ouex pipefail
 # Remove Horizon's stuff
 rm -rf /usr/share/horizon
 rm -r /etc/profile.d/horizon-aliases.sh
-rm -r /usr/lib/systemd/system/horizon-flatpak-manager.service
-rm -r /usr/libexec/horizon-flatpak-manager
+#rm -r /usr/lib/systemd/system/horizon-flatpak-manager.service
+#rm -r /usr/libexec/horizon-flatpak-manager
 
 dnf5 -y install wget dnf5-plugins
 
