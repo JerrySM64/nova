@@ -28,7 +28,7 @@ dnf5 -y install intel-media-driver
 rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedorainfracloud.org:sentry:kernel-blu' kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
 
 
-dnf5 -y install fastfetch flatpak bat pfetch-rs fedora-flathub-remote glibc-all-langpacks hourglass just google-noto-fonts-all
+dnf5 -y install greeter-default-helper fastfetch flatpak bat pfetch-rs fedora-flathub-remote glibc-all-langpacks hourglass just google-noto-fonts-all
 
-systemctl enable nova-flatpak-manager
+systemctl enable nova-flatpak-manager greeter-default
 systemctl --global enable nova-theme-manager
