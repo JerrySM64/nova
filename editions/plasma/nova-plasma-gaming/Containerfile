@@ -1,4 +1,4 @@
-FROM quay.io/fedora-ostree-desktops/kinoite:latest
+FROM quay.io/fedora-ostree-desktops/kinoite:41
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:stable
