@@ -17,7 +17,7 @@ COPY editions/gnome/nova-gnome/build.sh /tmp/build.sh
 COPY scripts/shared/build-shared.sh /tmp/build-shared.sh
 COPY scripts/gaming/build-gaming.sh /tmp/build-gaming.sh
 COPY files/shared /
-COPY files/gnome/gaming/os-release /etcv
+COPY files/gnome/gaming/os-release /etc
 
 RUN mkdir -p /var/lib/alternatives && \
     echo "nova_gnome_gaming" >> /usr/share/nova/image_type && \
