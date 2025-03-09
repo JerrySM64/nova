@@ -30,5 +30,5 @@ rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedor
 
 dnf5 -y install greeter-default-helper fastfetch flatpak bat pfetch-rs fedora-flathub-remote glibc-all-langpacks hourglass just google-noto-fonts-all
 
-systemctl enable nova-flatpak-manager greeter-default
-systemctl --global enable nova-theme-manager
+systemctl enable flatpak-manager greeter-default
+systemctl --global enable theme-manager
